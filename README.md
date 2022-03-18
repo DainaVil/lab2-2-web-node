@@ -3,16 +3,15 @@
 
 ### Структура файлов:
 
-├─ README.md  
-├─ packages.json  
+├─ README.md    
 ├─ log.txt  
-├─ src  
-|   └── index.js  
-├── dependency  
-│   ├── index.js  
+├─ Node  
+│   └── address_parser.js  
 │   └── package.json  
-├── parser  
-│   ├── address-parser.js  
-│   └── package.json  
+│   └── package-lock.json   
+│   └── __tests__  
+│   	└── address_parser.js  
+│   └── node_modules  
+│   	└── 
 
 В файле log.txt вывод терминала
