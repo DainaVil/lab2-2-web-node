@@ -1,0 +1,81 @@
+daina@Dainas-MBP node2 % git clone https://github.com/eleldar/Node.git
+Cloning into 'Node'...
+remote: Enumerating objects: 73, done.
+remote: Counting objects: 100% (73/73), done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 73 (delta 30), reused 60 (delta 17), pack-reused 0
+Receiving objects: 100% (73/73), 13.34 KiB | 2.22 MiB/s, done.
+Resolving deltas: 100% (30/30), done.
+daina@Dainas-MBP node2 % cd Node/parser
+daina@Dainas-MBP parser % npm install jest --save-dev
+
+added 333 packages, and audited 334 packages in 19s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice 
+npm notice New patch version of npm available! 8.5.1 -> 8.5.5
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v8.5.5
+npm notice Run npm install -g npm@8.5.5 to update!
+npm notice 
+daina@Dainas-MBP parser % cat packages.json 
+cat: packages.json: No such file or directory
+daina@Dainas-MBP parser % cat package.json 
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "address-parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
+daina@Dainas-MBP parser % mkdir __tests__
+daina@Dainas-MBP parser % cd __tests__ 
+daina@Dainas-MBP __tests__ % nano address-parser.js
+daina@Dainas-MBP __tests__ % cd ..
+daina@Dainas-MBP parser % nano package.json
+daina@Dainas-MBP parser % cat package.json
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "address-parser.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
+daina@Dainas-MBP parser % npm run test
+
+> parser@1.0.0 test
+> jest
+
+ PASS  __tests__/address-parser.js
+  Address parser
+    ✓ should parse correctly (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.378 s
+Ran all test suites.
+daina@Dainas-MBP parser % npm uninstall jest
+
+removed 333 packages, and audited 1 package in 2s
+
+found 0 vulnerabilities
+daina@Dainas-MBP parser % 
